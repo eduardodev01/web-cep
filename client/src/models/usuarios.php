@@ -27,7 +27,7 @@
             }
             else{
                 //if dont find the id, register a new user
-            $sql = $pdo->prepare("INSER INTO user (nome, email, senha) VALUES(:n, :e. :s)");
+            $sql = $pdo->prepare("INSERT INTO user (nome, email, senha) VALUES(:n, :e. :s)");
 
             $sql->bindValue(":n", $nome);
             $sql->bindValue(":e", $email);

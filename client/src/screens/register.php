@@ -56,10 +56,10 @@ if(isset($_POST['nome']))
     $copyPassword= addslashes($_POST['copy-password']);
     if(!empty($nome) && !empty($email) && !empty($password) && !empty($copyPassword))
     {
-        $u->conectar("web-cep", "localhsot", "root", "root");
+        $u->conectar("web-cep", "localhost", "root", "");
         if($u->msgErro == "")
         {
-            if($password ==$copyPassword)
+            if($password == $copyPassword)
             
              {
                 if($u->cadastrar($nome, $email, $password))
